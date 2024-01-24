@@ -2,7 +2,7 @@ import java.util.Queue;
 
 public class ProducerWithWait implements Runnable {
     private final Queue<Integer> queue;
-    private int max;
+    private final int max;
     int count = 0;
 
     public ProducerWithWait(Queue<Integer> queue, int max) {
@@ -19,7 +19,7 @@ public class ProducerWithWait implements Runnable {
                     try {
                         queue.wait();
                     } catch (InterruptedException ex) {
-                        ex.printStackTrace();
+                      //  ex.printStackTrace();
                     }
                 }
                 System.out.println("Producer is working with queue");

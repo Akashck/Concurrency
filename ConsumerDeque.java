@@ -15,7 +15,7 @@ public class ConsumerDeque implements Runnable {
             try {
                 System.out.println("Consumer thread is Working" + blockingQueue.take());
             } catch (InterruptedException ex) {
-                ex.printStackTrace();
+               // ex.printStackTrace();
 
             }
         }

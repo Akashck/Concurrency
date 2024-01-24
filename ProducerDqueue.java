@@ -16,7 +16,7 @@ public class ProducerDqueue implements Runnable {
                 blockingQueue.put(count);
                 System.out.println("prodcuer Thread is working");
             } catch (InterruptedException e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             }
             count++;
         }

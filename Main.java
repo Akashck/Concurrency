@@ -15,8 +15,8 @@ public class Main {
         consumerBlockingQueue.start();
         Thread produerWithQueue = new Thread(new ProducerWithWait(queue, max));
         Thread consumerWithQueue = new Thread(new ConsumerWithWait(queue));
-        //  produerWithQueue.start();
-       // consumerWithQueue.start();
+        produerWithQueue.start();
+        consumerWithQueue.start();
     }
 
 }
