@@ -1,8 +1,7 @@
 import java.util.Queue;
-import java.util.Random;
 
 public class ProducerWithWait implements Runnable {
-    private Queue<Integer> queue;
+    private final Queue<Integer> queue;
     private int max;
     int count = 0;
 

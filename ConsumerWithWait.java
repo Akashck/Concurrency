@@ -1,9 +1,8 @@
-import java.util.LinkedList;
 import java.util.Queue;
 
 public class ConsumerWithWait implements Runnable{
 
-    private Queue<Integer> queue;
+    private final Queue<Integer> queue;
    // private int max;
 
     public ConsumerWithWait(Queue<Integer> queue) {
@@ -19,7 +18,7 @@ public class ConsumerWithWait implements Runnable{
                     try {
                         queue.wait();
                     } catch (InterruptedException ex) {
-                        ex.printStackTrace();
+                       // ex.printStackTrace();
                     }
                 }
                 System.out.println("Consumer queue is working " + queue.remove());
