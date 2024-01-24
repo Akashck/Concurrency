@@ -2,7 +2,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class ProducerDqueue implements Runnable {
 
-    private BlockingQueue<Integer> blockingQueue;
+    private final BlockingQueue<Integer> blockingQueue;
     private int count = 1;
 
     public ProducerDqueue(BlockingQueue<Integer> blockingQueue) {

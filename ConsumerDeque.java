@@ -2,7 +2,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class ConsumerDeque implements Runnable {
 
-    private BlockingQueue<Integer> blockingQueue;
+    private final BlockingQueue<Integer> blockingQueue;
 
 
     public ConsumerDeque(BlockingQueue<Integer> blockingQueue) {
