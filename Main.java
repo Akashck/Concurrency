@@ -13,10 +13,10 @@ public class Main {
         Thread consumerBlockingQueue = new Thread(new ConsumerDeque(blockingQueue));
         producerBlockingQueue.start();
         consumerBlockingQueue.start();
-        Thread produerWithQueue = new Thread(new ProducerWithWait(queue, max));
-        Thread consumerWithQueue = new Thread(new ConsumerWithWait(queue));
-        produerWithQueue.start();
-        consumerWithQueue.start();
+      //  Thread produerWithQueue = new Thread(new ProducerWithWait(queue, max));
+     //   Thread consumerWithQueue = new Thread(new ConsumerWithWait(queue));
+     //   produerWithQueue.start();
+     //   consumerWithQueue.start();
     }
 
 }
