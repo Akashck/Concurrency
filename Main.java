@@ -1,12 +1,13 @@
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class Main {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         BlockingQueue<Integer> blockingQueue = new LinkedBlockingQueue<>();
         Queue<Integer> queue = new LinkedList<>();
         int max = 5;
@@ -18,8 +19,11 @@ public class Main {
         Thread consumerWithQueue = new Thread(new ConsumerWithWait(queue));
         produerWithQueue.start();
         consumerWithQueue.start();*/
-        ExecutorServicePractice practice = new ExecutorServicePractice();
-        practice.test();
+      //  ExecutorServicePractice practice = new ExecutorServicePractice();
+      //  practice.test();
+
+        CompleatableFutureExample futureExample = new CompleatableFutureExample();
+        System.out.println(futureExample.test());
 
     }
 
